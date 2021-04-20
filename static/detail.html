@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recipes!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h1>Recipe Detail</h1>
+      <h3>Edit Recipe</h3>
+
+      <form action="/api/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/png" />
+        <input type="text" placeholder="File name" name="filename" />
+        <button type="submit">Upload</button>
+      </form>
+
+      <form id="editForm">
+        <input type="text" placeholder="Recipe Title" name="title" />
+        <input type="text" placeholder="Image" name="image" />
+        <input type="text" placeholder="author" name="author" />
+        <textarea
+          type="text"
+          placeholder="Description"
+          name="description"
+        ></textarea>
+
+        <input type="text" placeholder="ingredients" name="ingredients" />
+        <input type="text" placeholder="preparation" name="preparation" />
+
+        <button>Update</button>
+      </form>
+
+      <div class="recipe"></div>
+    </div>
+
+    <script src="/js/details.js"></script>
+  </body>
+</html>
